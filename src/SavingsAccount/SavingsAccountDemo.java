@@ -13,7 +13,7 @@ public class SavingsAccountDemo {
 		initialCalculate();
 		System.out.println("Changing interest reate to 5%\n");
 		secondaryCalculate();
-		//Test Update 2 Github
+		//Test Update 2 Github ArrayList Branch
 	}
 
 	private static void initialCalculate() {
