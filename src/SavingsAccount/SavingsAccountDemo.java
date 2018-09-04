@@ -20,6 +20,7 @@ public class SavingsAccountDemo {
 		
 		System.out.println("Account1 initial savings: $" + acct1.toString());
 		System.out.println("Account2 initial savings: $" + acct2.toString());
+		System.out.println();
 		
 		//Save old Account
 		oldcAcct1 = acct1.getSavingsBalance();
