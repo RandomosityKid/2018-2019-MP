@@ -5,12 +5,15 @@ import java.util.Scanner;
 public class SavingsAccount {
 	private static double annualInterestRate = 0.0;
 	private double savingsBalance = 0.0;
+	private String fullName = null;
 	public static Scanner sc = new Scanner(System.in);
 	
+	//Default Constructor
 	public SavingsAccount(double savingsBalance){
 		setSavingsBalance(savingsBalance);
 	}
 	
+	//Method to change Interest Rate
 	public static void modifyInterestRate(double newInterestRate){
 		//Check for negative interest input
 		while(newInterestRate < 0.0){
@@ -20,6 +23,7 @@ public class SavingsAccount {
 		annualInterestRate = newInterestRate;
 	}
 	
+	//Method to calculate amount
 	public void calculateMonthlyInterest(){
 		savingsBalance += (savingsBalance + annualInterestRate) / 12;
 	}
@@ -38,13 +42,16 @@ public class SavingsAccount {
 	public double getSavingsBalance() {
 		return savingsBalance;
 	}
+	public String getFullName() {
+		return fullName;
+	}
 	public static void setAnnualInterestRate(double annualInterestRate) {
 		SavingsAccount.annualInterestRate = annualInterestRate;
 	}
 	public void setSavingsBalance(double savingsBalance) {
 		this.savingsBalance = savingsBalance;
 	}
-	
-	
-	
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
 }
