@@ -9,8 +9,9 @@ public class SavingsAccount {
 	public static Scanner sc = new Scanner(System.in);
 	
 	//Default Constructor
-	public SavingsAccount(String fullname, double savingsBalance){
-		setSavingsBalance(savingsBalance);
+	public SavingsAccount(){
+		setFullName("null");
+		setSavingsBalance(0.0);
 	}
 	
 	//Method to change Interest Rate
@@ -30,7 +31,7 @@ public class SavingsAccount {
 
 	@Override
 	public String toString() {
-		return String.format("%.2f", getSavingsBalance());
+		return String.format(fullName + ": $%.2f", getSavingsBalance());
 	}
 	
 	
