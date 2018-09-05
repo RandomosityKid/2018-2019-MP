@@ -46,7 +46,7 @@ public class SavingsAccount {
 	public String getFullName() {
 		return fullName;
 	}
-	public static void setAnnualInterestRate(double annualInterestRate) {
+	public void setAnnualInterestRate(double annualInterestRate) {
 		SavingsAccount.annualInterestRate = annualInterestRate;
 	}
 	public void setSavingsBalance(double savingsBalance) {

@@ -11,10 +11,6 @@ public class SavingsAccountDemo {
 	public static double modifyInterestRate = 0.0;
 	public static SavingsAccount printAcct = new SavingsAccount();
 	
-	//TODO: add notification that create was succesful
-	//TODO: add notification that calcul was succesful
-	//TODO: add notification that remove was succesful
-	
 	public static void main(String[] args) {
 		//Fix array number sync
 		SavingsAccount zero = new SavingsAccount();
@@ -33,7 +29,7 @@ public class SavingsAccountDemo {
 					create();
 					break;
 				case "calculate":
-					
+					calculate();
 					break;
 				case "print":
 					print();
@@ -63,7 +59,35 @@ public class SavingsAccountDemo {
 		createSA.setSavingsBalance(initialSavings);
 		
 		list.add(createSA);
+		System.out.println("Calculation complete!");
 //					System.out.println(list);
+	}
+	
+	public static void calculate() {
+		System.out.println("Enter account name(no spaces): ");
+		choice = sc.next();
+		System.out.println("Enter interest rate: ");
+		modifyInterestRate = sc.nextDouble();
+		System.out.println("For how many months?: ");
+		int months = sc.nextInt();
+		
+		SavingsAccount.modifyInterestRate(modifyInterestRate);
+		boolean lost = true;
+		for (int i = 1; i < list.size(); i++) {
+			if(list.get(i).getFullName().equals(choice)){
+				
+				//multiply the months
+				for (int j = 0; j < months; j++) {
+					list.get(i).calculateMonthlyInterest();
+//					System.out.println(list.get(i));	//show Process
+				}
+				lost = false;
+				System.out.println("Calculation complete!");
+				break;
+			}
+		}
+		if(lost)
+			System.out.println("Account not found.");
 	}
 	
 	public static void print(){
@@ -112,6 +136,7 @@ public class SavingsAccountDemo {
 			if(list.get(i).getFullName().equals(choice)){
 				list.remove(i);
 				lost = false;
+				System.out.println("Removal complete!");
 				break;
 			}
 		}
