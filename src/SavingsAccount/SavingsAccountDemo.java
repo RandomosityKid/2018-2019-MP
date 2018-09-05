@@ -50,7 +50,13 @@ public class SavingsAccountDemo {
 	
 	public static void create(){
 		System.out.println("Enter full name (no spaces): ");
-		choice = sc.next();
+		try {
+			choice = sc.next();
+		} catch (Exception e) {
+			System.out.println("Invalid name!");
+			System.exit(0);
+		}
+		
 		System.out.println("Enter initial Savings Balance: ");
 		initialSavings = sc.nextDouble();
 
