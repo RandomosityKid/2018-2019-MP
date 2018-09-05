@@ -9,7 +9,7 @@ public class SavingsAccount {
 	public static Scanner sc = new Scanner(System.in);
 	
 	//Default Constructor
-	public SavingsAccount(double savingsBalance){
+	public SavingsAccount(String fullname, double savingsBalance){
 		setSavingsBalance(savingsBalance);
 	}
 	
