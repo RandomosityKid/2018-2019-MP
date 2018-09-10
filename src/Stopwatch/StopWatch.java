@@ -2,11 +2,11 @@ package Stopwatch;
 
 public class StopWatch {
 	
-	private long startTime = System.currentTimeMillis();
-	private long endTime = System.currentTimeMillis();
+	private long startTime;
+	private long endTime;
 	
 	public StopWatch(){
-	
+		startTime = System.currentTimeMillis();
 	}
 
 	public long getStartTime() {
