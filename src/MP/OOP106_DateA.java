@@ -7,7 +7,7 @@ public class OOP106_DateA {
 		"", "January", "February", "March", "April", "May", "June",
 		"July", "August", "September", "October", "November", "December"
 	};
-	public int daysInMonths[] = {
+	public static int daysInMonths[] = {
 		0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
 	};
 	
@@ -36,6 +36,7 @@ public class OOP106_DateA {
 	
 	public static void calculate(){
 		monthToInt(monthStr);
+		februaryFix();
 		daysInYear();
 	}
 	
@@ -46,9 +47,25 @@ public class OOP106_DateA {
 			}
 		}
 	}
+	
+	public static void februaryFix() {
+		if (isLeapYear(year)) 
+			daysInMonths[2] = 29;
+	}
 
 	private static void daysInYear() {
 		
+	}
+	
+	public static boolean isLeapYear(int year) {
+		if ((year % 4 == 0) && (year % 400 == 0) || (year % 100 != 0)) 
+			return true;
+		else
+			return false;
+	}
+
+	public static int getYear() {
+		return year;
 	}
 	
 	public static void setDay(int day) {
