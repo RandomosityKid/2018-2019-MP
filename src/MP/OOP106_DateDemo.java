@@ -3,17 +3,15 @@ package MP;
 
 import java.util.Scanner;
 public class OOP106_DateDemo {
-	public static int monthint, day, year;
-	public static String month;
+	public static int monthInt, day, year;
+	public static String monthString;
 	public static OOP106_Date datee = new OOP106_Date();
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		int day, year;
-		String month;
 		
 		System.out.println("Enter Month: ");
-		month = sc.next();
+		monthString = sc.next();
 		
 		System.out.println("Enter Day: ");
 		day = sc.nextInt();
@@ -24,49 +22,47 @@ public class OOP106_DateDemo {
 		System.out.println("");
 		
 		monthToInt();
-		
-		
-//		System.out.println(datee.format(month, day, year));
-//		System.out.println(datee.format(month, day, year));
-//		System.out.println(datee.format(day, year));
+		System.out.println(datee.format(monthInt, day, year));
+		System.out.println(datee.format(monthString, day, year));
+		System.out.println(datee.format(day, year));
 	}
 	
 	public static void monthToInt() {
-		if (month.equalsIgnoreCase("january")) {
-			monthint = 1;
+		if (monthString.equalsIgnoreCase("january")) {
+			monthInt = 1;
 		}
-		if (month.equalsIgnoreCase("february")) {
-			monthint = 2;
+		if (monthString.equalsIgnoreCase("february")) {
+			monthInt = 2;
 		}
-		if (month.equalsIgnoreCase("march")) {
-			monthint = 3;
+		if (monthString.equalsIgnoreCase("march")) {
+			monthInt = 3;
 		}
-		if (month.equalsIgnoreCase("april")) {
-			monthint = 4;
+		if (monthString.equalsIgnoreCase("april")) {
+			monthInt = 4;
 		}
-		if (month.equalsIgnoreCase("may")) {
-			monthint = 5;
+		if (monthString.equalsIgnoreCase("may")) {
+			monthInt = 5;
 		}
-		if (month.equalsIgnoreCase("june")) {
-			monthint = 6;
+		if (monthString.equalsIgnoreCase("june")) {
+			monthInt = 6;
 		}
-		if (month.equalsIgnoreCase("july")) {
-			monthint = 7;
+		if (monthString.equalsIgnoreCase("july")) {
+			monthInt = 7;
 		}
-		if (month.equalsIgnoreCase("august")) {
-			monthint = 8;
+		if (monthString.equalsIgnoreCase("august")) {
+			monthInt = 8;
 		}
-		if (month.equalsIgnoreCase("september")) {
-			monthint = 9;
+		if (monthString.equalsIgnoreCase("september")) {
+			monthInt = 9;
 		}
-		if (month.equalsIgnoreCase("october")) {
-			monthint = 10;
+		if (monthString.equalsIgnoreCase("october")) {
+			monthInt = 10;
 		}
-		if (month.equalsIgnoreCase("november")) {
-			monthint = 11;
+		if (monthString.equalsIgnoreCase("november")) {
+			monthInt = 11;
 		}
-		if (month.equalsIgnoreCase("december")) {
-			monthint = 12;
+		if (monthString.equalsIgnoreCase("december")) {
+			monthInt = 12;
 		}
 	}
 }
