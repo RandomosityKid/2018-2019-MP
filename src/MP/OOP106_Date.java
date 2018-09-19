@@ -17,8 +17,7 @@ public class OOP106_Date {
 	}
 	
 	public static String format(int monthInt, int day, int year) {
-		monthToInt(monthStr);
-		format = String.format("%2d/%2d/%4d", monthInt, day, year);
+		format = String.format("%02d/%02d/%04d", monthInt, day, year);
 		return format;
 	}
 	
@@ -29,39 +28,12 @@ public class OOP106_Date {
 				break;
 			}
 		}
-		format = String.format(monthStr +"%2d, %4d", day, year);
+		format = String.format(monthStr +" %02d, %04d", day, year);
 		return format;
 	}
 	
 	public static int format(int daysInYear, int year) {
 		return 0;
-	}
-	
-	public static void monthToInt(String monthStr) {
-		if (monthStr.equalsIgnoreCase("january")) 
-			monthInt = 1;
-		if (monthStr.equalsIgnoreCase("february")) 
-			monthInt = 2;
-		if (monthStr.equalsIgnoreCase("march")) 
-			monthInt = 3;
-		if (monthStr.equalsIgnoreCase("april")) 
-			monthInt = 4;
-		if (monthStr.equalsIgnoreCase("may")) 
-			monthInt = 5;
-		if (monthStr.equalsIgnoreCase("june")) 
-			monthInt = 6;
-		if (monthStr.equalsIgnoreCase("july")) 
-			monthInt = 7;
-		if (monthStr.equalsIgnoreCase("august")) 
-			monthInt = 8;
-		if (monthStr.equalsIgnoreCase("september")) 
-			monthInt = 9;
-		if (monthStr.equalsIgnoreCase("october")) 
-			monthInt = 10;
-		if (monthStr.equalsIgnoreCase("november")) 
-			monthInt = 11;
-		if (monthStr.equalsIgnoreCase("december")) 
-			monthInt = 12;
 	}
 	
 	public static boolean isLeapYear(int year) {
@@ -98,6 +70,12 @@ public class OOP106_Date {
 	public static void setMonthStr(String monthStr) {
 		OOP106_Date.monthStr = monthStr;
 	}
+
+	public static void setMonthInt(int monthInt) {
+		OOP106_Date.monthInt = monthInt;
+	}
+	
+	
 		
 	
 }

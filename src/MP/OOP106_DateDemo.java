@@ -24,7 +24,7 @@ public class OOP106_DateDemo {
 		monthToInt();
 		System.out.println(datee.format(monthInt, day, year));
 		System.out.println(datee.format(monthString, day, year));
-		System.out.println(datee.format(day, year));
+//		System.out.println(datee.format(day, year));
 	}
 	
 	public static void monthToInt() {
