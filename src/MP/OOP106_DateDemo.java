@@ -41,32 +41,32 @@ public class OOP106_DateDemo {
 		if (month.equalsIgnoreCase("march")) {
 			monthint = 3;
 		}
-//		if (month.equalsIgnoreCase("january")) {
-//			monthint = 1;
-//		}
-//		if (month.equalsIgnoreCase("january")) {
-//			monthint = 1;
-//		}
-//		if (month.equalsIgnoreCase("january")) {
-//			monthint = 1;
-//		}
-//		if (month.equalsIgnoreCase("january")) {
-//			monthint = 1;
-//		}
-//		if (month.equalsIgnoreCase("january")) {
-//			monthint = 1;
-//		}
-//		if (month.equalsIgnoreCase("january")) {
-//			monthint = 1;
-//		}
-//		if (month.equalsIgnoreCase("january")) {
-//			monthint = 1;
-//		}
-//		if (month.equalsIgnoreCase("january")) {
-//			monthint = 1;
-//		}
-//		if (month.equalsIgnoreCase("january")) {
-//			monthint = 1;
-//		}
+		if (month.equalsIgnoreCase("april")) {
+			monthint = 4;
+		}
+		if (month.equalsIgnoreCase("may")) {
+			monthint = 5;
+		}
+		if (month.equalsIgnoreCase("june")) {
+			monthint = 6;
+		}
+		if (month.equalsIgnoreCase("july")) {
+			monthint = 7;
+		}
+		if (month.equalsIgnoreCase("august")) {
+			monthint = 8;
+		}
+		if (month.equalsIgnoreCase("september")) {
+			monthint = 9;
+		}
+		if (month.equalsIgnoreCase("october")) {
+			monthint = 10;
+		}
+		if (month.equalsIgnoreCase("november")) {
+			monthint = 11;
+		}
+		if (month.equalsIgnoreCase("december")) {
+			monthint = 12;
+		}
 	}
 }
