@@ -2,10 +2,10 @@ package MP;
 
 
 import java.util.Scanner;
-public class OOP106_DateDemob {
+public class OOP106_DateBDemo {
 	public static int monthInt, day, year, daysInYear;
 	public static String monthString;
-	public static OOP106_Dateb datee = new OOP106_Dateb();
+	public static OOP106_DateB datee = new OOP106_DateB();
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
