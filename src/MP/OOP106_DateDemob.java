@@ -2,10 +2,10 @@ package MP;
 
 
 import java.util.Scanner;
-public class OOP106_DateDemo {
-	public static int monthInt, day, year;
+public class OOP106_DateDemob {
+	public static int monthInt, day, year, daysInYear;
 	public static String monthString;
-	public static OOP106_Date datee = new OOP106_Date();
+	public static OOP106_Dateb datee = new OOP106_Dateb();
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -64,5 +64,9 @@ public class OOP106_DateDemo {
 		if (monthString.equalsIgnoreCase("december")) {
 			monthInt = 12;
 		}
+	}
+	
+	public static void daysInYear() {
+		
 	}
 }
