@@ -11,15 +11,23 @@ public class OOP106_DateADemo {
 		
 		System.out.println("Enter Month: ");
 		monthString = sc.next();
+		datee.setMonthStr(monthString);
 		
 		System.out.println("Enter Day: ");
 		day = sc.nextInt();
+		datee.setDay(day);
 		
 		System.out.println("Enter Year: ");
 		year = sc.nextInt();
+		datee.setYear(year);
 		
-		
+		datee.calculate();
 		System.out.println("");
+		
+		
+		datee.format1();
+		datee.format2();
+		datee.format3();
 		
 	}
 }
