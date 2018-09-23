@@ -1,6 +1,6 @@
 package MP;
 
-public class OOP106_Dateb {
+public class OOP106_DateB {
 	public static String format;
 	public static int day, year, monthInt;
 	public static String monthStr;
@@ -12,7 +12,7 @@ public class OOP106_Dateb {
 		0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
 	};
 	
-	public OOP106_Dateb(){
+	public OOP106_DateB(){
 		
 	}
 	
@@ -60,19 +60,19 @@ public class OOP106_Dateb {
 	}
 
 	public static void setDay(int day) {
-		OOP106_Dateb.day = day;
+		OOP106_DateB.day = day;
 	}
 
 	public static void setYear(int year) {
-		OOP106_Dateb.year = year;
+		OOP106_DateB.year = year;
 	}
 
 	public static void setMonthStr(String monthStr) {
-		OOP106_Dateb.monthStr = monthStr;
+		OOP106_DateB.monthStr = monthStr;
 	}
 
 	public static void setMonthInt(int monthInt) {
-		OOP106_Dateb.monthInt = monthInt;
+		OOP106_DateB.monthInt = monthInt;
 	}
 	
 	
