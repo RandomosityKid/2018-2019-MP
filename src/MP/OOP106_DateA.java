@@ -46,6 +46,45 @@ public class OOP106_DateA {
 	}
 	
 	private static void monthToInt(String monthStr) {
+//		switch(monthStr){
+//			case "january":
+//				monthInt = 1;
+//				break;
+//			case "february":
+//				monthInt = 2;
+//				break;
+//			case "march":
+//				monthInt = 3;
+//				break;
+//			case "april":
+//				monthInt = 4;
+//				break;
+//			case "may":
+//				monthInt = 5;
+//				break;
+//			case "june":
+//				monthInt = 6;
+//				break;
+//			case "july":
+//				monthInt = 7;
+//				break;
+//			case "august":
+//				monthInt = 8;
+//				break;
+//			case "september":
+//				monthInt = 9;
+//				break;
+//			case "october":
+//				monthInt = 10;
+//				break;
+//			case "november":
+//				monthInt = 11;
+//				break;
+//			case "december":
+//				monthInt = 12;
+//				break;
+//		}
+		
 		for (int check = 1; check < monthArray.length; check++) {
 			if (monthStr.equalsIgnoreCase(monthArray[check])) {
 				monthInt = check;
@@ -57,9 +96,61 @@ public class OOP106_DateA {
 		if (isLeapYear) 
 			daysInMonths[2] = 29;
 	}
-
+	
 	private static void daysInYear() {
-		for (int month = 1; month < daysInMonths.length; month++) {
+//		switch (monthStr) {
+//			case "january":
+//				dayAsYear += day;
+//				break;
+//			case "february":
+//				dayAsYear = 31;
+//				dayAsYear += daysInMonths[2];
+//				break;
+//			case "march":
+//				dayAsYear = 59;
+//				dayAsYear += day;
+//				break;
+//			case "april":
+//				dayAsYear = 90;
+//				dayAsYear += day;
+//				break;
+//			case "may":
+//				dayAsYear = 120;
+//				dayAsYear += day;
+//				break;
+//			case "june":
+//				dayAsYear = 151;
+//				dayAsYear += day;
+//				break;
+//			case "july":
+//				dayAsYear = 181;
+//				dayAsYear += day;
+//				break;
+//			case "august":
+//				dayAsYear = 212;
+//				dayAsYear += day;
+//				break;
+//			case "september":
+//				dayAsYear = 243;
+//				dayAsYear += day;
+//				break;
+//			case "october":
+//				dayAsYear = 273;
+//				dayAsYear += day;
+//				break;
+//			case "november":
+//				dayAsYear = 304;
+//				dayAsYear += day;
+//				break;
+//			case "december":
+//				dayAsYear = 334;
+//				dayAsYear += day;
+//				break;
+//			default:
+//				break;
+//		}
+		
+		for (int month = 1; month <= daysInMonths.length; month++) {
 			dayAsYear += daysInMonths[month];
 //			System.out.println(dayAsYear);
 			if ((monthStr.equalsIgnoreCase(monthArray[month]))){
