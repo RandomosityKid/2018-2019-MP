@@ -42,6 +42,10 @@ public class OOP106_DateB {
 		return String.format("%02d/%02d/%04d", date[1], date[2], date[3]);
 	}
 	
+	public String format2(){
+		return String.format("%s %02d %04d", monthArray[date[0]], date[1], date[2]);
+	}
+	
 	public String format(String monthStr, int day, int year) {
 		for (int i = 1; i < monthArray.length; i++) {
 			if (monthStr.equalsIgnoreCase(monthArray[i])) {
@@ -84,19 +88,20 @@ public class OOP106_DateB {
 	public void setDay(int day) {
 		date[2] = day;
 	}
-
 	public void setYear(int year) {
 		date[3] = year;
 	}
-
 	public void setMonthStr(String monthStr) {
-		this.monthStr = monthStr;
+		for (int month = 1; month < monthArray.length; month++) {
+			if (monthStr.equalsIgnoreCase(monthArray[month])) {
+				date[1] = month;
+			}
+		}
+		
 	}
-
 	public void setMonthInt(int monthInt) {
 		date[1] = monthInt;
 	}
-
 	public void setDaysYearFormat(int daysYearFormat) {
 		this.daysYearFormat = daysYearFormat;
 	}
@@ -104,16 +109,4 @@ public class OOP106_DateB {
 	public int getYear() {
 		return year;
 	}
-
-	public int date1() {
-		return date[2];
-	}
-	
-	public void returnDate(){
-		System.out.println(date[1]+" "+ date[2]+" "+ date[3]);
-	}
-	
-	
-		
-	
 }
