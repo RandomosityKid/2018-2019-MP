@@ -62,11 +62,7 @@ public class OOP106_DateB {
 	}
 	
 	public static boolean isLeapYear(int year) {
-		if ((year % 4 == 0) && (year % 400 == 0) || (year % 100 != 0)) {
-			return true;
-		} else {
-			return false;
-		}
+		return ((year % 4 == 0) && (year % 400 == 0) || (year % 100 != 0));
 		
 //		Leap Year Conditions:
 //		1. Divisible by 4
@@ -103,7 +99,16 @@ public class OOP106_DateB {
 		date[1] = monthInt;
 	}
 	public void setDaysYearFormat(int daysYearFormat) {
-		this.daysYearFormat = daysYearFormat;
+		
+		daysInMonths[2] = (isLeapYear(year) ? 29 : 28);
+		int month = 1;
+		while(daysYearFormat > daysInMonths[month]){
+            daysYearFormat -= daysInMonths[month];
+            month++;
+        }
+		
+		setMonthInt(month);
+		setDay(daysYearFormat);
 	}
 
 	public int getYear() {
