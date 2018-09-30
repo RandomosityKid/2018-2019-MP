@@ -1,11 +1,17 @@
 package MP;
 
+import java.util.Arrays;
+
 public class OOP106_HugeInteger {
 	public static int[] intArray = new int[40];
 	public static int integerLength;
 	
 	public OOP106_HugeInteger(){
 		
+	}
+	
+	OOP106_HugeInteger(String integer){
+		parse(integer);
 	}
 	
 	public static void parse(String numbersHiding) {
@@ -41,8 +47,8 @@ public class OOP106_HugeInteger {
 	@Override
 	public String toString() {
 		
-		return super.toString(); //To change body of generated methods, choose Tools | Templates.
-	}
+		return String.format("%s", parseToString());	
+}
 	
 	public static void isEqualTo() {
 		
@@ -78,6 +84,16 @@ public class OOP106_HugeInteger {
 	
 	public static void remainder() {
 		
+	}
+	
+	public String parseToString(){
+		String strHugeInteger = "";
+
+        for(int i=40 - integerLength; i<40; i++){
+            strHugeInteger += intArray[i];
+        }
+
+        return strHugeInteger;
 	}
 	
 }
