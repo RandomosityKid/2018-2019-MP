@@ -17,7 +17,7 @@ public class SavingsAccount {
 		annualInterestRate = newInterestRate;
 	}
 	public void calculateMonthlyInterest(){
-		savingsBalance += (savingsBalance + annualInterestRate) / 12;
+		savingsBalance += (savingsBalance * annualInterestRate) / 12;
 	}
 	@Override
 	public String toString() {

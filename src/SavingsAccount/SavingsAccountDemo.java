@@ -59,7 +59,8 @@ public class SavingsAccountDemo {
 	private static void seeDifference() {
 		newcAcct1 = acct1.getSavingsBalance() - oldcAcct1;
 		newcAcct2 = acct2.getSavingsBalance() - oldcAcct2;
-		System.out.printf("Acct1 Increased by; $%.2f\n", newcAcct1);
-		System.out.printf("Acct2 Increased by; $%.2f\n", newcAcct2);
+		System.out.printf("Acct1 Increased by: $%.2f\n", newcAcct1);
+		System.out.printf("Acct2 Increased by:03."
+				+ "22222 $%.2f\n", newcAcct2);
 	}
 }
