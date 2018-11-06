@@ -14,7 +14,7 @@ public class OOP106_HugeInteger {
 		parse(integer);
 	}
 	
-	public static void parse(String numbersHiding) {
+	public void parse(String numbersHiding) {
 		String integerStr = "";
 		
 		//Parse digits in string
@@ -36,6 +36,10 @@ public class OOP106_HugeInteger {
 		}
 	}
 	
+	 public int[] getHugeInteger(){
+        return intArray;
+    }
+	
 	public static void add() {
 		
 	}
@@ -50,8 +54,18 @@ public class OOP106_HugeInteger {
 		return String.format("%s", parseToString());	
 }
 	
-	public static void isEqualTo() {
-		
+	public static boolean isEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		int[] tmp1 = hi1.getHugeInteger();
+        int[] tmp2 = hi1.getHugeInteger();
+
+        for(int i=0; i<40; i++){
+			System.out.println(tmp1[i] + ", " + tmp2[i]);
+            if(tmp1[i] != tmp2[i]){
+				
+                return false;
+			}
+        }
+        return true;
 	}
 	
 	public static void isNotEqualTo() {
