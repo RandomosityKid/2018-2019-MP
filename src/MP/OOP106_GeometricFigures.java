@@ -84,7 +84,7 @@ public class OOP106_GeometricFigures extends Application{
 			}
 		});
 		// Set the stage
-		Scene stage = new Scene(pane_Main, 400, 150);
+		Scene stage = new Scene(pane_Main, 350, 250);
 		primaryStage.setTitle("Geometric Figures"); 
 		primaryStage.setScene(stage); 
 		primaryStage.show();
@@ -94,4 +94,7 @@ public class OOP106_GeometricFigures extends Application{
 		rect.setFill(paintme);
 		ell.setFill(paintme);
 	}
+	public static void main(String[] args) {
+        Application.launch(args);
+    }
 }
