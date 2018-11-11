@@ -10,12 +10,13 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class OOP106_MilesKilometerConverter extends Application{
+	
 	@Override
     public void start(Stage primaryStage) throws Exception {
 
 		//Create Label
-		Label label_miles = new Label("Mile:");
-        Label label_kilometers = new Label("Kilometers:");
+		Label lbl_miles = new Label("Miles:");
+        Label lbl_kilo = new Label("Kilometers:");
 
 		//Create TextField
         TextField tf_miles = new TextField();
@@ -34,9 +35,9 @@ public class OOP106_MilesKilometerConverter extends Application{
 		paneTest.setPadding(new Insets(10, 10, 10, 10));
 		
 		//Add nodes to pane
-		paneTest.add(label_miles, 0, 0);
+		paneTest.add(lbl_miles, 0, 0);
 		paneTest.add(tf_miles, 1, 0);
-		paneTest.add(label_kilometers, 0, 1);
+		paneTest.add(lbl_kilo, 0, 1);
 		paneTest.add(tf_kilometers, 1, 1);
 		
 		//Functionss
