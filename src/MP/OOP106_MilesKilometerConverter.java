@@ -10,7 +10,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class OOP106_MilesKilometerConverter extends Application{
-	
 	@Override
     public void start(Stage primaryStage) throws Exception {
 
