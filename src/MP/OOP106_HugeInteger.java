@@ -16,7 +16,6 @@ public class OOP106_HugeInteger {
 	
 	public void parse(String numbersHiding) {
 		String integerStr = "";
-		
 		//Parse digits in string
 		for (int numlength = 0; numlength < numbersHiding.length(); numlength++) {
 			Character n = numbersHiding.charAt(numlength);
@@ -50,7 +49,6 @@ public class OOP106_HugeInteger {
 
 	@Override
 	public String toString() {
-		
 		return String.format("%s", parseToString());	
 }
 	
@@ -59,7 +57,7 @@ public class OOP106_HugeInteger {
         int[] tmp2 = hi1.getHugeInteger();
 
         for(int i=0; i<40; i++){
-			System.out.println(tmp1[i] + ", " + tmp2[i]);
+//			System.out.println(tmp1[i] + ", " + tmp2[i]);
             if(tmp1[i] != tmp2[i]){
 				
                 return false;
@@ -102,11 +100,9 @@ public class OOP106_HugeInteger {
 	
 	public String parseToString(){
 		String strHugeInteger = "";
-
         for(int i=40 - integerLength; i<40; i++){
             strHugeInteger += intArray[i];
         }
-
         return strHugeInteger;
 	}
 	
