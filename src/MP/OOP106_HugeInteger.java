@@ -13,12 +13,12 @@ public class OOP106_HugeInteger {
         this.intArray = intArray;
     }
 	
-	public int getLength(){
-        return this.integerLength;
-    }
-	
 	public int[] getHugeInteger(){
         return intArray;
+    }
+	
+	public int getLength(){
+        return this.integerLength;
     }
 	
 	OOP106_HugeInteger(String integer){
@@ -45,6 +45,8 @@ public class OOP106_HugeInteger {
 		}
 	}
 	
+	
+	//Equality Checks
 	public static boolean isEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] tmp1 = hi1.getHugeInteger();
         int[] tmp2 = hi2.getHugeInteger();
@@ -57,10 +59,16 @@ public class OOP106_HugeInteger {
         }
         return true;
 	}
-	
 	public static boolean isNotEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2){
 		return !isEqualTo(hi1, hi2);
 	}
+	public boolean isZero(){
+        for(int i : getHugeInteger()){
+            if(i != 0)
+                return false;
+        }
+        return true;
+    }
 	
 	//Add() and Sub() are the same with one line difference but I can't turn it into method, so wrote it twice;
 	public static OOP106_HugeInteger add(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
@@ -76,7 +84,6 @@ public class OOP106_HugeInteger {
         
         return new OOP106_HugeInteger(myString);
 	}
-	
 	public static OOP106_HugeInteger sub(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] i1 = hi1.getHugeInteger();
         int[] i2 = hi2.getHugeInteger();
@@ -91,9 +98,7 @@ public class OOP106_HugeInteger {
         return new OOP106_HugeInteger(myString);
 	}
 
-	
-	
-	
+	//Like with Add() and Sub(), it's all just similar code with one difference. <= and >= are even simpler;
 	public static boolean isGreaterThan(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] tmp1 = hi1.getHugeInteger();
         int[] tmp2 = hi2.getHugeInteger();
@@ -103,7 +108,6 @@ public class OOP106_HugeInteger {
 			ans = (tmp1[i] > tmp2[i]) ? true : false;
 		return ans;
 	}
-	
 	public static boolean isLessThan(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] tmp1 = hi1.getHugeInteger();
         int[] tmp2 = hi2.getHugeInteger();
@@ -113,15 +117,14 @@ public class OOP106_HugeInteger {
 			ans = (tmp1[i] < tmp2[i]) ? true : false;
 		return ans;
 	}
-	
 	public static boolean isGreaterThanOrEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		return (isGreaterThan(hi1, hi2) || isEqualTo(hi1, hi2));
 	}
-	
 	public static boolean isLessThanOrEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		return (isLessThan(hi1, hi2) || isEqualTo(hi1, hi2));
 	}
 	
+	//AMBITION METHODS
 	public static OOP106_HugeInteger mult(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] i1 = hi1.getHugeInteger();
         int[] i2 = hi2.getHugeInteger();
@@ -135,7 +138,6 @@ public class OOP106_HugeInteger {
         
         return new OOP106_HugeInteger(myString);
 	}
-	
 	public static OOP106_HugeInteger div(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] i1 = hi1.getHugeInteger();
         int[] i2 = hi2.getHugeInteger();
@@ -153,7 +155,6 @@ public class OOP106_HugeInteger {
         
         return new OOP106_HugeInteger(myString);
 	}
-	
 	public static OOP106_HugeInteger mod(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] i1 = hi1.getHugeInteger();
         int[] i2 = hi2.getHugeInteger();
@@ -176,7 +177,6 @@ public class OOP106_HugeInteger {
 	public String toString() {
 		return String.format("%s", parseToString());	
 }
-	
 	public String parseToString(){
 		String strHugeInteger = "";
 		for(int i=40 - integerLength; i<40; i++){

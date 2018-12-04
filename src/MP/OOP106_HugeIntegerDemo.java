@@ -11,18 +11,23 @@ public class OOP106_HugeIntegerDemo {
 //		System.out.println("Integer3 = " + i3.toString());
 
 		//Equality Check
-		System.out.println("\nisEqualTo: " + OOP106_HugeInteger.isEqualTo(i1, i2));
+		System.out.println("\nEQUALITY CHECK");
+		System.out.println("isEqualTo: " + OOP106_HugeInteger.isEqualTo(i1, i2));
 		System.out.println("isnotEqualTo: " + OOP106_HugeInteger.isNotEqualTo(i1, i2));
+		System.out.println("hi1 isZero " + i1.isZero());
+        System.out.println("hi1 isZero " + i2.isZero());
 		
 		//Math
-		System.out.println("\naddition: " + OOP106_HugeInteger.add(i1, i2));
+		System.out.println("\nARITHMETIC");
+		System.out.println("addition: " + OOP106_HugeInteger.add(i1, i2));
 		System.out.println("subtraction: " + OOP106_HugeInteger.sub(i1, i2));
 		System.out.println("multiplication: " + OOP106_HugeInteger.mult(i1, i2));
 		System.out.println("division: " + OOP106_HugeInteger.div(i1, i2));
 		System.out.println("remainder: " + OOP106_HugeInteger.mod(i1, i2));
 		
 		//Comparisons
-		System.out.println("\nisGreaterThan: " + OOP106_HugeInteger.isGreaterThan(i1, i2));
+		System.out.println("\nCOMPARISONS");
+		System.out.println("isGreaterThan: " + OOP106_HugeInteger.isGreaterThan(i1, i2));
         System.out.println("isLessThan: " + OOP106_HugeInteger.isLessThan(i1, i2));
         System.out.println("isGreaterThanOrEqualTo: " + OOP106_HugeInteger.isGreaterThanOrEqualTo(i1, i2));
 		System.out.println("isLessThanOrEqualTo " + OOP106_HugeInteger.isLessThanOrEqualTo(i1, i2));
