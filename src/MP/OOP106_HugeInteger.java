@@ -122,16 +122,54 @@ public class OOP106_HugeInteger {
 		return (isLessThan(hi1, hi2) || isEqualTo(hi1, hi2));
 	}
 	
-	public static void multiply() {
-		
+	public static OOP106_HugeInteger mult(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		int[] i1 = hi1.getHugeInteger();
+        int[] i2 = hi2.getHugeInteger();
+        String myString = "";
+
+        //Remove redundant math (for when length is of different sizes)
+        int trimmedNum = (hi1.getLength() > hi2.getLength()) ? hi1.getLength() : hi2.getLength();
+
+        for(int i=40 - trimmedNum; i<40; i++)
+            myString += i1[i] * i2[i];
+        
+        return new OOP106_HugeInteger(myString);
 	}
 	
-	public static void divide() {
-		
+	public static OOP106_HugeInteger div(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		int[] i1 = hi1.getHugeInteger();
+        int[] i2 = hi2.getHugeInteger();
+        String myString = "";
+
+        //Remove redundant math (for when length is of different sizes)
+        int trimmedNum = (hi1.getLength() > hi2.getLength()) ? hi1.getLength() : hi2.getLength();
+
+        for(int i=40 - trimmedNum; i<40; i++){
+			if (i2[i] == 0) 
+				myString += 0;
+			else 
+				myString += i1[i] / i2[i];
+		}
+        
+        return new OOP106_HugeInteger(myString);
 	}
 	
-	public static void remainder() {
-		
+	public static OOP106_HugeInteger mod(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		int[] i1 = hi1.getHugeInteger();
+        int[] i2 = hi2.getHugeInteger();
+        String myString = "";
+
+        //Remove redundant math (for when length is of different sizes)
+        int trimmedNum = (hi1.getLength() > hi2.getLength()) ? hi1.getLength() : hi2.getLength();
+
+        for(int i=40 - trimmedNum; i<40; i++){
+			if (i2[i] == 0) 
+				myString += 0;
+			else 
+				myString += i1[i] % i2[i];
+		}
+        
+        return new OOP106_HugeInteger(myString);
 	}
 	
 	@Override
