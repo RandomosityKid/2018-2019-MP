@@ -19,9 +19,9 @@ public class OOP106_HugeIntegerDemo {
 		System.out.println("subtraction: " + OOP106_HugeInteger.sub(i1, i2));
 		
 		//Comparisons
-//		System.out.println("isGreaterThan " + OOP106_HugeInteger.isGreaterThan(hi1, hi2));
-//        System.out.println("isLessThan " + OOP106_HugeInteger.isLessThan(hi1, hi2));
-//        System.out.println("isGreaterThanOrEqualTo " + OOP106_HugeInteger.isGreaterThanOrEqualTo(hi1, hi2));
-//		System.out.println("isLessThanOrEqualTo " + OOP106_HugeInteger.isLessThanOrEqualTo(hi1, hi2));
+		System.out.println("\nisGreaterThan: " + OOP106_HugeInteger.isGreaterThan(i1, i2));
+        System.out.println("isLessThan: " + OOP106_HugeInteger.isLessThan(i1, i2));
+        System.out.println("isGreaterThanOrEqualTo: " + OOP106_HugeInteger.isGreaterThanOrEqualTo(i1, i2));
+		System.out.println("isLessThanOrEqualTo " + OOP106_HugeInteger.isLessThanOrEqualTo(i1, i2));
 	}
 }

@@ -52,7 +52,6 @@ public class OOP106_HugeInteger {
         for(int i=0; i<40; i++){
 //			System.out.println(tmp1[i] + ", " + tmp2[i]);
             if(tmp1[i] != tmp2[i]){
-				
                 return false;
 			}
         }
@@ -94,24 +93,33 @@ public class OOP106_HugeInteger {
 
 	
 	
-	public static void isNotEqualTo() {
-		
+	
+	public static boolean isGreaterThan(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		int[] tmp1 = hi1.getHugeInteger();
+        int[] tmp2 = hi2.getHugeInteger();
+		boolean ans = true;
+
+        for(int i=0; i<40; i++)
+			ans = (tmp1[i] > tmp2[i]) ? true : false;
+		return ans;
 	}
 	
-	public static void isGreaterThan() {
-		
+	public static boolean isLessThan(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		int[] tmp1 = hi1.getHugeInteger();
+        int[] tmp2 = hi2.getHugeInteger();
+		boolean ans = true;
+
+        for(int i=0; i<40; i++)
+			ans = (tmp1[i] < tmp2[i]) ? true : false;
+		return ans;
 	}
 	
-	public static void isLessThan() {
-		
+	public static boolean isGreaterThanOrEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		return (isGreaterThan(hi1, hi2) || isEqualTo(hi1, hi2));
 	}
 	
-	public static void isGreaterThanOrEqualTo() {
-		
-	}
-	
-	public static void isLessThanOrEqualTo() {
-		
+	public static boolean isLessThanOrEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		return (isLessThan(hi1, hi2) || isEqualTo(hi1, hi2));
 	}
 	
 	public static void multiply() {
