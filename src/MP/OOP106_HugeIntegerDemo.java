@@ -16,6 +16,12 @@ public class OOP106_HugeIntegerDemo {
 		
 		//Math
 		System.out.println("\naddition: " + OOP106_HugeInteger.add(i1, i2));
-		System.out.println("subtraction: " + OOP106_HugeInteger.add(i1, i2));
+//		System.out.println("subtraction: " + OOP106_HugeInteger.add(i1, i2));
+		
+		//Comparisons
+//		System.out.println("isGreaterThan " + OOP106_HugeInteger.isGreaterThan(hi1, hi2));
+//        System.out.println("isLessThan " + OOP106_HugeInteger.isLessThan(hi1, hi2));
+//        System.out.println("isGreaterThanOrEqualTo " + OOP106_HugeInteger.isGreaterThanOrEqualTo(hi1, hi2));
+//		System.out.println("isLessThanOrEqualTo " + OOP106_HugeInteger.isLessThanOrEqualTo(hi1, hi2));
 	}
 }

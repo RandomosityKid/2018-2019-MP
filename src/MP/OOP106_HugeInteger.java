@@ -66,21 +66,29 @@ public class OOP106_HugeInteger {
 	public static OOP106_HugeInteger add(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] i1 = hi1.getHugeInteger();
         int[] i2 = hi2.getHugeInteger();
+        String myString = "";
 
-        String addStr = "";
+        //Remove redundant math
+        int trimmedNum = (hi1.getLength() > hi2.getLength()) ? hi1.getLength() : hi2.getLength();
 
-        // avoid redundant arithmetic
-        int count = (hi1.getLength() > hi2.getLength()) ?
-            hi1.getLength() : hi2.getLength();
-
-        for(int i=40 - count; i<40; i++){
-            addStr += i1[i] + i2[i];
-        }
-        return new OOP106_HugeInteger(addStr);
+        for(int i=40 - trimmedNum; i<40; i++)
+            myString += i1[i] + i2[i];
+        
+        return new OOP106_HugeInteger(myString);
 	}
 	
-	public static void subtract() {
-		
+	public static OOP106_HugeInteger subtract(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		int[] i1 = hi1.getHugeInteger();
+        int[] i2 = hi2.getHugeInteger();
+        String myString = "";
+
+        //Remove redundant math
+        int trimmedNum = (hi1.getLength() > hi2.getLength()) ? hi1.getLength() : hi2.getLength();
+
+        for(int i=40 - trimmedNum; i<40; i++)
+            myString += i1[i] - i2[i];
+        
+        return new OOP106_HugeInteger(myString);
 	}
 
 	
