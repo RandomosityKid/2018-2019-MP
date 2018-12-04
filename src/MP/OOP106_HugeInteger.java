@@ -13,6 +13,10 @@ public class OOP106_HugeInteger {
         this.intArray = intArray;
     }
 	
+	public int getLength(){
+        return this.integerLength;
+    }
+	
 	public int[] getHugeInteger(){
         return intArray;
     }
@@ -55,8 +59,24 @@ public class OOP106_HugeInteger {
         return true;
 	}
 	
-	public static void add() {
-		
+	public static boolean isNotEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2){
+		return !isEqualTo(hi1, hi2);
+	}
+	
+	public static OOP106_HugeInteger add(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		int[] i1 = hi1.getHugeInteger();
+        int[] i2 = hi2.getHugeInteger();
+
+        String addStr = "";
+
+        // avoid redundant arithmetic
+        int count = (hi1.getLength() > hi2.getLength()) ?
+            hi1.getLength() : hi2.getLength();
+
+        for(int i=40 - count; i<40; i++){
+            addStr += i1[i] + i2[i];
+        }
+        return new OOP106_HugeInteger(addStr);
 	}
 	
 	public static void subtract() {
