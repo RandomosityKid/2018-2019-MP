@@ -63,6 +63,7 @@ public class OOP106_HugeInteger {
 		return !isEqualTo(hi1, hi2);
 	}
 	
+	//Add() and Sub() are the same with one line difference but I can't turn it into method, so wrote it twice;
 	public static OOP106_HugeInteger add(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] i1 = hi1.getHugeInteger();
         int[] i2 = hi2.getHugeInteger();
@@ -77,7 +78,7 @@ public class OOP106_HugeInteger {
         return new OOP106_HugeInteger(myString);
 	}
 	
-	public static OOP106_HugeInteger subtract(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+	public static OOP106_HugeInteger sub(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
 		int[] i1 = hi1.getHugeInteger();
         int[] i2 = hi2.getHugeInteger();
         String myString = "";

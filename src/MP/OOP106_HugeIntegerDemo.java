@@ -16,7 +16,7 @@ public class OOP106_HugeIntegerDemo {
 		
 		//Math
 		System.out.println("\naddition: " + OOP106_HugeInteger.add(i1, i2));
-//		System.out.println("subtraction: " + OOP106_HugeInteger.add(i1, i2));
+		System.out.println("subtraction: " + OOP106_HugeInteger.sub(i1, i2));
 		
 		//Comparisons
 //		System.out.println("isGreaterThan " + OOP106_HugeInteger.isGreaterThan(hi1, hi2));
