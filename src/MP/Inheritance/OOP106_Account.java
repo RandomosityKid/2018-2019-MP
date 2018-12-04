@@ -34,7 +34,11 @@ public class OOP106_Account
     {
 	return bal;
     }
-
+	
+	public void setBal(double bal) {
+		this.bal = bal;
+	}
+	
     public double getAccountNumber()
     {
 	return accnum;
