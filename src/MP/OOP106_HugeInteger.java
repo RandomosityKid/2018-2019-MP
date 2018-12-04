@@ -13,6 +13,10 @@ public class OOP106_HugeInteger {
         this.intArray = intArray;
     }
 	
+	public int[] getHugeInteger(){
+        return intArray;
+    }
+	
 	OOP106_HugeInteger(String integer){
 		parse(integer);
 	}
@@ -37,65 +41,61 @@ public class OOP106_HugeInteger {
 		}
 	}
 	
+	public static boolean isEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
+		int[] tmp1 = hi1.getHugeInteger();
+        int[] tmp2 = hi2.getHugeInteger();
+
+        for(int i=0; i<40; i++){
+//			System.out.println(tmp1[i] + ", " + tmp2[i]);
+            if(tmp1[i] != tmp2[i]){
+				
+                return false;
+			}
+        }
+        return true;
+	}
+	
+	public static void add() {
+		
+	}
+	
+	public static void subtract() {
+		
+	}
 
 	
-//	 public int[] getHugeInteger(){
-//        return intArray;
-//    }
 	
-//	public static void add() {
-//		
-//	}
-//	
-//	public static void subtract() {
-//		
-//	}
-
-//	public static boolean isEqualTo(OOP106_HugeInteger hi1, OOP106_HugeInteger hi2) {
-//		int[] tmp1 = hi1.getHugeInteger();
-//        int[] tmp2 = hi2.getHugeInteger();
-//
-//        for(int i=0; i<40; i++){
-////			System.out.println(tmp1[i] + ", " + tmp2[i]);
-//            if(tmp1[i] != tmp2[i]){
-//				
-//                return false;
-//			}
-//        }
-//        return true;
-//	}
-//	
-//	public static void isNotEqualTo() {
-//		
-//	}
-//	
-//	public static void isGreaterThan() {
-//		
-//	}
-//	
-//	public static void isLessThan() {
-//		
-//	}
-//	
-//	public static void isGreaterThanOrEqualTo() {
-//		
-//	}
-//	
-//	public static void isLessThanOrEqualTo() {
-//		
-//	}
-//	
-//	public static void multiply() {
-//		
-//	}
-//	
-//	public static void divide() {
-//		
-//	}
-//	
-//	public static void remainder() {
-//		
-//	}
+	public static void isNotEqualTo() {
+		
+	}
+	
+	public static void isGreaterThan() {
+		
+	}
+	
+	public static void isLessThan() {
+		
+	}
+	
+	public static void isGreaterThanOrEqualTo() {
+		
+	}
+	
+	public static void isLessThanOrEqualTo() {
+		
+	}
+	
+	public static void multiply() {
+		
+	}
+	
+	public static void divide() {
+		
+	}
+	
+	public static void remainder() {
+		
+	}
 	
 	@Override
 	public String toString() {
