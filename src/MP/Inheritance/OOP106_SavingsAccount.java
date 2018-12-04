@@ -16,6 +16,7 @@ public class OOP106_SavingsAccount extends OOP106_Account{
 		this.interest = interest/100;
 	}
 	
+	@Override
 	public void withdraw(double amount) {
 		if (amount < getBalance())
 			setBal(getBalance() - amount);

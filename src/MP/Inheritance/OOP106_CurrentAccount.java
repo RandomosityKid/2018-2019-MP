@@ -22,6 +22,7 @@ public class OOP106_CurrentAccount extends OOP106_Account{
 		this.overdraftLimit = overdraftLimit;
 	}
 	
+	@Override
 	public void withdraw(double amount) {
 		if (getBalance() - amount > overdraftLimit) 
 			setBal(getBalance() - amount);
