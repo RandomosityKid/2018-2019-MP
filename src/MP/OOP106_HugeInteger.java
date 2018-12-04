@@ -1,12 +1,17 @@
 package MP;
 
 public class OOP106_HugeInteger {
-	public static int[] intArray = new int[40];
-	public static int integerLength;
+	public int[] intArray = new int[40];
+	public int integerLength; //Remove extra 0's
 	
+	//Default Constructor
 	public OOP106_HugeInteger(){
-		
 	}
+	
+	//Gives Identity (Makes sure referenced HI isn't the same)
+	public OOP106_HugeInteger(int[] intArray){
+        this.intArray = intArray;
+    }
 	
 	OOP106_HugeInteger(String integer){
 		parse(integer);
@@ -32,18 +37,7 @@ public class OOP106_HugeInteger {
 		}
 	}
 	
-	@Override
-	public String toString() {
-		return String.format("%s", parseToString());	
-}
-	
-	public String parseToString(){
-		String strHugeInteger = "";
-		for(int i=40 - integerLength; i<40; i++){
-			strHugeInteger += intArray[i];
-		}
-		return strHugeInteger;
-	}
+
 	
 //	 public int[] getHugeInteger(){
 //        return intArray;
@@ -103,6 +97,16 @@ public class OOP106_HugeInteger {
 //		
 //	}
 	
-
+	@Override
+	public String toString() {
+		return String.format("%s", parseToString());	
+}
 	
+	public String parseToString(){
+		String strHugeInteger = "";
+		for(int i=40 - integerLength; i<40; i++){
+			strHugeInteger += intArray[i];
+		}
+		return strHugeInteger;
+	}
 }
